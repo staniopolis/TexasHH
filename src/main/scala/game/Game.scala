@@ -8,14 +8,13 @@ object Game extends App {
   type Block = List[Card]
   type Suit = Char
   type CardDeck = Map[Suit, Set[(Char, Int)]]
-  var input: String = ""
 
   do {
     try {
       println("\nPlease, input card combination: 5 cards for board and 2 for each hand.\n" +
         "To exit game, please, press \"Enter\": \n")
 
-      input = StdIn.readLine()
+     val input = StdIn.readLine()
       if (input == "") {
         println("Thank you for playing. Have a nice day.")
         System.exit(0)
